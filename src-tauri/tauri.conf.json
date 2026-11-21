@@ -1,0 +1,31 @@
+{
+  "$schema": "https://schema.tauri.app/config/2",
+  "productName": "Lovert Board",
+  "version": "0.2.0",
+  "identifier": "com.lovertstudio.lovertboard",
+  "build": {
+    "beforeDevCommand": "npm run dev",
+    "devUrl": "http://localhost:1420",
+    "beforeBuildCommand": "npm run build",
+    "frontendDist": "../dist"
+  },
+  "app": {
+    "windows": [{
+      "title": "Lovert Board",
+      "width": 1280,
+      "height": 820,
+      "minWidth": 760,
+      "minHeight": 600,
+      "center": true,
+      "resizable": true
+    }],
+    "security": { "csp": null }
+  },
+  "bundle": {
+    "active": true,
+    "targets": ["deb", "appimage"],
+    "category": "Graphics",
+    "shortDescription": "Offline-first visual creative workspace",
+    "longDescription": "A local-first visual workspace for ideas, notes and creative projects."
+  }
+}
